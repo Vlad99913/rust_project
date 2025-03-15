@@ -18,5 +18,4 @@ target/
 
 *target*
 **/target/
-**/Cargo.lock
 Cargo.lock
