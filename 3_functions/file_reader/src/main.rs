@@ -10,17 +10,21 @@ fn main() {
         return;
     }
     let filename = args[1].clone();
-    let file = File::open(filename);
-    match file {
-        Ok(file) => {
-            let reader = BufReader::new(file);
-            for line in reader.lines() {
-                println!("{}", line.unwrap());
-            }
-        },
-        Err(e) => {
-            println!("Error: {}", e);
-        }
-        
+    read_file(filename);
     }
-}
+    
+    fn read_file(filename: String) {
+        let file = File::open(filename);
+        match file {
+            Ok(file) => {
+                let reader = BufReader::new(file);
+                for line in reader.lines() {
+                    println!("{}", line.unwrap());
+                }
+            },
+            Err(e) => {
+                println!("Error: {}", e);
+            }
+        
+        }
+    }
