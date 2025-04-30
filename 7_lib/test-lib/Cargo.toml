@@ -1,0 +1,7 @@
+[package]
+name = "test-lib"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cli-utils = { path = "/home/vlad/Desktop/rust_ex/6_lib/cli-utils" }
